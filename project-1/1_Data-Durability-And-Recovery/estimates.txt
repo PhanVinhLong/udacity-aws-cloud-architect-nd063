@@ -1,0 +1,17 @@
+1. Minimum RTO for a single AZ outage
+The RTO for single AZ outage is the time to switch from the primary database to the standby replica in another AZ. Based on AWS documentation, it takes 60-120 seconds.
+reference: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-ug.pdf (page 72)
+
+2. Minimum RTO for a single region outage
+Step to handle the failover:
+   1. Promote the read replica: we have the secondary region read replica, the time for this step depends on the size of the replica. It takes 5-30 minutes.
+   2. Direct database traffic to the promoted DB instance: based on the application configurations, this takes 5-15 minutes.
+   3. (Optional) Create a replacement read replica with the promoted DB instance as its source: this is the impotant step to make sure we have the replica in case of there is something wrong happens. This is NOT included in the RTO because the applications are okay in the step 2.
+Totally, the minimum RTO in this case is 10 minutes.
+
+3. Minimum RPO for a single AZ outage
+We have the read replica so in the best case the minimum RPO is 0.
+
+4. Minimum RPO for a single region outage
+Same with the single AZ outage issue.
+
