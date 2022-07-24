@@ -1,0 +1,15 @@
+Group hierarchy;Region;Description;Service;Upfront;Monthly;First 12 months total;Currency;Configuration summary
+My Estimate;US East (N. Virginia);;Amazon EC2;0;3073.44;36881.28;USD;Operating system (Linux), Quantity (6), Pricing strategy (On-Demand Instances), Storage amount (100 GB), Instance type (m5a.4xlarge)
+My Estimate;US East (N. Virginia);;Amazon CloudFront;0;1861.2;22334.40;USD;Data transfer out to internet (20000 GB per month), Data transfer out to origin (10000 GB per month), Number of requests (HTTPS) (10000000 per month)
+My Estimate;US East (N. Virginia);;Application Load Balancer;0;74.83;897.96;USD;Number of Application Load Balancers (1)
+My Estimate;US East (N. Virginia);;Network Load Balancer;0;60.23;722.76;USD;Number of Network Load Balancers (1), Processed bytes per NLB for TLS (10 GB per hour), Average number of new TLS connections (10 per second), Average TLS connection duration (1 seconds)
+My Estimate;US East (N. Virginia);;S3 Standard;0;266;3192.00;USD;S3 Standard storage (10000 GB per month)
+My Estimate;US East (N. Virginia);;Data Transfer;0;0;0.00;USD;DT Inbound: Internet (0 TB per month), DT Outbound: Not selected (0 TB per month)
+My Estimate;US East (N. Virginia);;Amazon RDS for PostgreSQL;0;4258.08;51096.96;USD;Storage volume (Provisioned IOPS SSD (io1)), Provisioning IOPS (), Storage amount (100 GB per month), Nodes (4), Instance Type (db.m5.2xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment Option (Multi-AZ), Pricing Model (OnDemand)
+My Estimate;US East (N. Virginia);;Data Transfer;0;0;0.00;USD;DT Inbound: Internet (0 TB per month), DT Outbound: Amazon CloudFront (0 TB per month), DT Intra-Region: (0 TB per month), Data transfer cost (0)
+My Estimate;US East (N. Virginia);;Amazon EC2;0;8975.2;107702.40;USD;Operating system (Linux), Quantity (4), Pricing strategy (On-Demand Instances), Storage amount (100 GB), Instance type (p3.2xlarge)
+;;;;;;;;
+There are some machine learning task in our application, so I removed 2 m5a.4xlarge and add 4 p3.2xlarge for the machine learning tasks.;;;;;;;;
+;;;;;;;;
+Acknowledgement;;;;;;;;
+* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.;;;;;;;;
