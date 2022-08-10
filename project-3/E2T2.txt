@@ -1,0 +1,14 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+SecurityHub
+  - Failed High	CIS.4.1	Ensure no security groups allow ingress from 0.0.0.0/0 to port 22
+  => Deny ingress from 0.0.0.0/0 to port 22 (ssh), or allow only trusted network (bastion, ...)
+  - Failed High	CIS.4.3	Ensure the default security group of every VPC restricts all traffic
+  => restricts all traffic for default VPC
+  - Failed High	CIS.2.1	Ensure CloudTrail is enabled in all regions
+  => enable CloudTrail
+  - Failed High	CIS.4.2	Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389	
+  => Deny ingress from 0.0.0.0/0 to port 3389
+  - Failed Medium       CIS.2.9	Ensure VPC flow logging is enabled in all VPCs
+  => enable VPC flow logging

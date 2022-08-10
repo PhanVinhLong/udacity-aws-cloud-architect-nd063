@@ -1,0 +1,14 @@
+# What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+    - Move application instances to a private subnet.
+    - Use AWS WAF to prevent attacks.
+    - Disable password authentication ssh to instances.
+    - Use NAT Gateway in the public subnet.
+
+# Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+    No, the attackers can access the s3 when they are inside the VPC.
+
+# Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+    No, it will affects new objects which are added after enabling the encryption.
+
+# What would happen if the original cloud formation templates are applied to this environment.
+    All changed configs will be overwritten by the original templates.

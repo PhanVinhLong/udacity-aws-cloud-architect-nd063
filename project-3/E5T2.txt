@@ -1,0 +1,23 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+    - checkov
+
+### Example vulnerability
+    - Ensure no security groups allow ingess from 0.0.0.0:0 to port 22
+    - EC2 instance should not have public IP
+    - Ensure no hard-coded secrets exist in EC2 user data
+
+##Scan AMI’s or containers for OS vulnerabilities
+    - clair
+
+### Example vulnerability
+    - CVE List: https://cve.mitre.org/cve
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+    - AWS security hub
+    - AWS Inspector
+    - AWS Config
+
+### Example vulnerability
+    - AWS security hub: AWS Foundational Security Best Practices v1.0.0, CIS AWS Foundations Benchmark v1.2.0, PCI DSS v3.2.1

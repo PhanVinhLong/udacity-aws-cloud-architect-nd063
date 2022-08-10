@@ -1,0 +1,11 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+The InstanceRole has the permission to do any s3 actions on any s3 buckets, which violate the least privilige principle.
+The InstanceRole should has only get permission to the S3BucketRecipesFree bucket.
+
+# Poor practice 2
+The web service instance is deployed to a public subnet. It should be deployed in a private subnet.
+
+# Poor practice 3
+All service security groups allows any inbound and outbound traffics. They should allows needed traffics only.

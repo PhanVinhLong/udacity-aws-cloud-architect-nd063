@@ -1,0 +1,9 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+    - Hight Severity: i-04766b3d575e3eef4 is performing SSH brute force attacks against 10.192.10.69. Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password.
+        The instance i-04766b3d575e3eef4 is attacking the machine with ip 10.192.10.69 using brute force attacks
+    - Low Severity: 10.192.11.65 is performing SSH brute force attacks against i-0e2cf8c87cbbe0bce. Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password. 
+        The instance i-0e2cf8c87cbbe0bce is being attacked by machine with ip 10.192.11.65 by brute force attacks
+
+# Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+GuardDuty uses the intelligence feeds (list of malicious IPs, domains, ...) and machine learning and scans within the AWS environment (CloudTrail, DNS logs, VPC flow logs, ...) to identfy the attack.
+Ref: https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html
